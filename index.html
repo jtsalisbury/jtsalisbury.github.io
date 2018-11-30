@@ -1,70 +1,160 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>JT Salisbury</title>
+		<title>JT</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-		<link rel="stylesheet" href="res/css/style.css">
-		<link rel="icon" href="./res/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+		<link rel="stylesheet" href="./res/css/main.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+		<script src="./res/js/main.js"></script>
 	</head>
 	<body>
-		
-		<div class="navbar" id="navbar">
-			<a href="#"><strong>JT Salisbury</strong></a>
-
-			<a href="index.html" class="navbarLink active">Home</a>
-			<a href="exp.html" class="navbarLink">Experience</a>
-			<a href="contact.html" class="navbarLink">Contact & Links</a>
-			<a href="resume_web.pdf" target="_blank" class="navbarLink navbarLinkLast">Resume</a>
-			
-			<a href="javascript:void(0);" class="icon" onclick="expandMenu()">
-				<img class="nav-bars" src="res/images/menu.png">
-			</a>
+		<div id="bg">
 		</div>
-			
-		<div class="container">
-			<h1 class="header">About Me</h1>
 
-			<h3 class="subheader">Personal</h3>
-			<p class="body">
-				I am a third year Computer Engineering major at the University of Cincinnati, currently pursuing my bachelors degree, and am interested in software development - open to all platforms. 		
-			</p>
-
-			<h3 class="subheader">Goals</h3>
-			<p class="body">
-				<ul>
-					<li>After I complete my bachelor's degree, I may attend graduate school for my masters.</li> 
-					<li>Professionally, I want to perform valued work which creates a positive impact on others.</li>
-				</ul>
-			</p>
-
-			<h3 class="subheader">Involvement</h3>
-			<p class="body">
-				<ul>
-					<!--<li>UC Alliance: I've been a member of UC Alliance since I started college, where I've interacted with a diverse group of individuals of different backgrounds, expanding my cultural awareness.</li>-->
-					<li><a href="https://acmatuc.org/" target="_blank">ACM@UC</a>: I joined ACM@UC my Sophomore year, where I've met other students with an interest in technology. As well, it's given me a look into other specialities, and areas of interest for my future studies.</li>
-					<li><a href="http://acmwuc.com/" target="_blank">ACM-W</a>: I joined ACM-W my third year through common connections with the goal of helping to increase the number of under represented populations in technology.</li>
-					<li><a href="http://revolutionuc.com/" target="_blank">RevolutionUC</a>: I joined the RevolutionUC organization team when I joined ACM@UC. RevolutionUC is the University of Cincinnati's 24 hour, student ran hackathon. I was part of the logistics team, where we were responsible for much of the organization and planning.</li>
-				</ul>
-			</p>
-
-			<h3 class="subheader">Beliefs</h3>
-			<p class="body">
-				I am a fan of open source and believe that by contributing to it, we can assist others in learning new skills. 
-				I am also an advocate for inclusive communities and a believer of furthering diversification. By welcoming various groups and expanding our communities, we increase our knowledge and drastically improve the world around us by incorporating ideas from varying backgrounds. 
-			</p>
+		<div id="nav">
+			<div id="logo">
+				<p>JT</p>
+			</div>
+			<ul class="nav-ul">
+				<li><a href="#" class="expandNavigation">Expand</a></li>
+				<li><a href="#about" class="active">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
 		</div>
+
+		<div class="section first">
+			<div class="container">
+				<div class="intro">
+					<div class="intro-image">
+						<img class="circular" src="res/img/self.jpeg">
+					</div>
+
+					<div class="intro-text">
+						My name's JT Salisbury, I'm a third year computer engineering major with a passion for software development.
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section">
+			<div class="section-header">
+				About
+			</div>
+
+			<div class="container">
+				<div class="body-3">
+					<div class="body-header">
+						Education
+					</div>
+					<div class="body-3-icon school">
+					</div>
+					<div class="body-3-text">
+						I graduated from Watkins Memorial High School in 2016, and started at the University of Cincinnati the following Fall. I'm currently pursuing my bachelors degree in Computer Engineering set to graduate in the Spring of 2021. 
+					</div>
+				</div>
+				<div class="body-3">
+					<div class="body-header">
+						Involvement
+					</div>
+					<div class="body-3-icon involvement">
+					</div>
+					<div class="body-3-text">
+						Outside of classes, I am the Public Relations and Outreach Chair for our local <a target="_blank" href="https://acmatuc.org/">ACM</a> chapter. I am also a member of <a href="http://acmwuc.com/">ACM-W</a> and an organizer for UC's hackathon, <a href="https://revolutionuc.com/">RevolutionUC</a>.
+					</div>
+				</div>
+				<div class="body-3">
+					<div class="body-header">
+						Interests
+					</div>
+					<div class="body-3-icon interests">
+					</div>
+					<div class="body-3-text">
+						In my free time, I enjoy learning new skills and expanding my programming skillset. As well, I enjoy participating in hackathons and organazing RevolutionUC, the University of Cincinnati's 24 hour hackathon.
+					</div>
+				</div>
+				
+			</div>
+		</div>
+<br/>
+		<div class="section">
+			<div class="section-header">
+				Projects
+			</div>
+
+			<div class="container">
+				<div class="body">
+					<div class="body-text">
+						<ul>
+							<li>
+								<a href="https://github.com/KragleStudios/FactionWars" target="_blank">Faction Wars</a>
+								<ul>
+									<li>June 2016 - December 2016</li>
+									<li>A gamemode written in Lua developed for the popular video game Garry's Mod.</li>
+									<li>Collaborated with a team of 10 others, contributin more than 16,000 lines of code with over 180 commits.</li>
+									<li>This project was completed in 2017, however it is no longer maintained.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="body">
+					<div class="body-text">
+						<ul>
+							<li>
+								<a href="https://github.com/jtsalisbury/adminme" target="_blank">AdminMe</a>
+								<ul>
+									<li>February 2018 - Present</li>
+									<li>An administration system for the popular video game Garry's Mod featuring an in game and web-based interface, along with database saving through SQL.</li>
+									<li>In game portion written in Lua allowing for advanced administration techniques and intuitive functionality.</li>
+									<li>Web based platform utilizing HTML & CSS, JavaScript and PHP featuring customization with planned implementation of direct server communication through sockets.</li>
+									<li>Currently being re-written to improve ease of use, functionality, and design.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="section-header">
+				Experience
+			</div>
+
+			<div class="container">
+				<div class="body">
+					<div class="body-img">
+						<img src="res/img/icons/bmw.png">
+					</div>
+					<div class="body-text">
+						<ul>
+							<li>
+								<a href="https://www.bmwusfactory.com/" target="_blank">BMW Manufacturing Co., Intern</a>
+								<ul>
+									<li>Fall 2017, Summer 2018</li>
+									<li>Full-time, VPS Assembly Group</li>
+									<li>At BMW, I 
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 	</body>
 
-	<script>
-		function expandMenu() {
-		    var x = document.getElementById("navbar");
-		    if (x.className === "navbar") {
-		        x.className += " responsive";
-		    } else {
-		        x.className = "navbar";
-		    }
-		}
-	</script>
+	
 
-</html>
 </html>

@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>JT Salisbury</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+		<link rel="stylesheet" href="res/css/style.css">
+		<link rel="icon" href="./res/favicon.ico">
+	</head>
+	<body>
+		
+		<div class="navbar" id="navbar">
+			<a href="#"><strong>JT Salisbury</strong></a>
+
+			<a href="index.html" class="navbarLink active">Home</a>
+			<a href="exp.html" class="navbarLink">Experience</a>
+			<a href="contact.html" class="navbarLink">Contact & Links</a>
+			<a href="resume_web.pdf" target="_blank" class="navbarLink navbarLinkLast">Resume</a>
+			
+			<a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+				<img class="nav-bars" src="res/images/menu.png">
+			</a>
+		</div>
+			
+		<div class="container">
+			<h1 class="header">About Me</h1>
+
+			<h3 class="subheader">Personal</h3>
+			<p class="body">
+				I am a third year Computer Engineering major at the University of Cincinnati, currently pursuing my bachelors degree, and am interested in software development - open to all platforms. 		
+			</p>
+
+			<h3 class="subheader">Goals</h3>
+			<p class="body">
+				<ul>
+					<li>After I complete my bachelor's degree, I may attend graduate school for my masters.</li> 
+					<li>Professionally, I want to perform valued work which creates a positive impact on others.</li>
+				</ul>
+			</p>
+
+			<h3 class="subheader">Involvement</h3>
+			<p class="body">
+				<ul>
+					<!--<li>UC Alliance: I've been a member of UC Alliance since I started college, where I've interacted with a diverse group of individuals of different backgrounds, expanding my cultural awareness.</li>-->
+					<li><a href="https://acmatuc.org/" target="_blank">ACM@UC</a>: I joined ACM@UC my Sophomore year, where I've met other students with an interest in technology. As well, it's given me a look into other specialities, and areas of interest for my future studies.</li>
+					<li><a href="http://acmwuc.com/" target="_blank">ACM-W</a>: I joined ACM-W my third year through common connections with the goal of helping to increase the number of under represented populations in technology.</li>
+					<li><a href="http://revolutionuc.com/" target="_blank">RevolutionUC</a>: I joined the RevolutionUC organization team when I joined ACM@UC. RevolutionUC is the University of Cincinnati's 24 hour, student ran hackathon. I was part of the logistics team, where we were responsible for much of the organization and planning.</li>
+				</ul>
+			</p>
+
+			<h3 class="subheader">Beliefs</h3>
+			<p class="body">
+				I am a fan of open source and believe that by contributing to it, we can assist others in learning new skills. 
+				I am also an advocate for inclusive communities and a believer of furthering diversification. By welcoming various groups and expanding our communities, we increase our knowledge and drastically improve the world around us by incorporating ideas from varying backgrounds. 
+			</p>
+		</div>
+	</body>
+
+	<script>
+		function expandMenu() {
+		    var x = document.getElementById("navbar");
+		    if (x.className === "navbar") {
+		        x.className += " responsive";
+		    } else {
+		        x.className = "navbar";
+		    }
+		}
+	</script>
+
+</html>
+</html>
