@@ -9,10 +9,10 @@
 
 function setScrolling() {
 	$("#nav").finish().animate({
-		"margin-top": "-8px",
-		"width": "100%",
+		"margin-top": "0px",
+		"width": "99.2vw",
 		"backgroundColor": "#f0f0f0",
-		"margin-left": "-=14vw"
+		"left": "0vw"
 	}, 100);
 
 	$("#nav").removeClass("nav-expanded");
@@ -23,8 +23,31 @@ function remScrolling() {
 		"margin-top": "20px",
 		"width": "70vw",
 		"backgroundColor": "rgba(0, 0, 0, 0)",
-		"margin-left": $(window).width() / 2 - $(".section").width() / 2 + 6
+		"left": $(".container").offset().left
 	}, 100);
+
+	$("#nav").removeClass("nav-expanded");
+}
+
+// In descending order!
+var sections = ["about", "projects", "experience", "contact"]
+
+var sectionPositions = [0, 0, 0];
+
+function loadSectionPositions() {
+	for (var i = 0; i < sections.length; i++) {
+		var pos = $("#" + sections[i]).offset().top - 100;
+
+		sectionPositions[i] = pos;
+	}
+}
+
+function testToResizeNavbar() {
+	if ($(this).width() <= 800) {
+		$(".nav-ul").addClass("nav-ul-mobile").removeClass("nav-ul");
+	} else {
+		$(".nav-ul-mobile").addClass("nav-ul").removeClass("nav-ul-mobile");
+	}
 
 	$("#nav").removeClass("nav-expanded");
 }
@@ -39,6 +62,9 @@ $(document).ready(function() {
 		scrollApplied = true;
 	}
 
+	loadSectionPositions();
+	testToResizeNavbar();
+
 	$(this).scroll(function() {
 		distance = $(this).scrollTop();
 
@@ -52,7 +78,21 @@ $(document).ready(function() {
 
 			scrollApplied = false;
 		}
+
+
+		for (var i = 0; i < sections.length; i++) {
+			if (distance > sectionPositions[i]) {
+				$(".goToSection").removeClass("active");
+				$(".goTo_" + sections[i]).addClass("active");
+			}
+		}
 	});
+
+	$(".backToTop").click(function() {
+		$("html, body").stop().animate({
+	        scrollTop: 0
+	    }, 500);
+	})
 
 	$(".expandNavigation").click(function(e) {
 		e.preventDefault();
@@ -60,16 +100,21 @@ $(document).ready(function() {
 		$("#nav").toggleClass("nav-expanded");
 	})
 
+	$(".goToSection").click(function(e){
+		e.preventDefault();
 
+		var to = $(this).attr("href");
+
+    	$("html, body").stop().animate({
+	        scrollTop: $(to).offset().top - 50
+	    }, 500);
+
+    });
 })
 
 $(window).on("resize", function() {
-	if ($(this).width() <= 800) {
-		$(".nav-ul").addClass("nav-ul-mobile").removeClass("nav-ul");
-	} else {
-		$(".nav-ul-mobile").addClass("nav-ul").removeClass("nav-ul-mobile");
-	}
+	testToResizeNavbar();
 
-	$("#nav").removeClass("nav-expanded");
+	loadSectionPositions();
 })
 
