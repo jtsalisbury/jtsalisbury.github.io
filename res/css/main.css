@@ -138,8 +138,8 @@ body {
 
 
 .nav-expanded {
-	height: 160px !important;
-	background-color: #f0f0f0;
+	height: 165px !important;
+	background-color: #f0f0f0 !important;
 }
 
 .nav-expanded ul {
