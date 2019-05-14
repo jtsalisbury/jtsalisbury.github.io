@@ -242,6 +242,7 @@ a {
 	padding-top: 20px;
 	display: inline-block;
 	text-align: left;
+	word-wrap: break-word;
 }
 
 .body-header {
