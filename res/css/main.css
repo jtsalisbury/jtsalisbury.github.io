@@ -49,7 +49,7 @@ body {
 	height: 55px;
 	
 	margin-top: 20px;
-	left: calc(50% - 35.6vw);
+	left: 15vw;
 
 	position: fixed;
 
@@ -195,7 +195,6 @@ a {
 */
 .section {
 	width: 100vw;
-	margin-left: -15px;
 	padding-top: 40px;
 	text-align: center;
 }
@@ -207,7 +206,7 @@ a {
 .section-header {
 	border-bottom: 2px solid rgb(240, 240, 240);
 	width: 70vw;
-	margin: 0px auto;
+	margin-left: 15vw;
 	margin-bottom: 20px;
 
 	text-align: center;
