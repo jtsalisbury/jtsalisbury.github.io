@@ -101,9 +101,11 @@ $(document).ready(function() {
 	})
 
 	$(".goToSection").click(function(e){
-		e.preventDefault();
+		  e.preventDefault();
 
-		var to = $(this).attr("href");
+		  var to = $(this).attr("href");
+
+      $("#nav").removeClass("nav-expanded");
 
     	$("html, body").stop().animate({
 	        scrollTop: $(to).offset().top - 50
