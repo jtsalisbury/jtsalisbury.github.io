@@ -17,27 +17,6 @@ body {
 }
 
 
-@media only screen and (max-width: 800px) {
-	.container {
-		display: inline-block;
-	}
-
-	.section {
-		width: 100vw;
-	}
-
-	.body-3 {
-		width: 70vw;
-		margin: 0 auto;
-	}
-
-	.body-3:not(:first-child) {
-		margin-left: 0px;
-		margin-top: 10px;
-	}
-}
-
-
 /*
 	Navigation Formatting 
 */
@@ -78,7 +57,7 @@ body {
 	border-width: 0px 2px 2px 2px;
 	border-color: rgb(240, 240, 240);
 
-	overflow: visible !important;
+	overflow: visible;
 }
 
 .nav-ul {
@@ -378,4 +357,24 @@ a {
 	padding: 15px;
 	text-align: center;
 	color: #63707e;
+}
+
+@media only screen and (max-width: 800px) {
+	.container {
+		display: inline-block;
+	}
+
+	.section {
+		width: 100vw;
+	}
+
+	.body-3 {
+		width: 70vw;
+		margin: 0 auto;
+	}
+
+	.body-3:not(:first-child) {
+		margin-left: 0px;
+		margin-top: 10px;
+	}
 }
