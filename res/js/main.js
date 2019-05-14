@@ -29,6 +29,9 @@ function remScrolling() {
 	$("#nav").removeClass("nav-expanded");
 }
 
+
+
+
 // In descending order!
 var sections = ["about", "projects", "experience", "contact"]
 
@@ -98,6 +101,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		$("#nav").toggleClass("nav-expanded");
+    $(".hamburger").toggleClass("change");
 	})
 
 	$(".goToSection").click(function(e){
