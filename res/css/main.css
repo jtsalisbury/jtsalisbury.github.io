@@ -360,7 +360,7 @@ a {
 	color: #63707e;
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 	.container {
 		display: inline-block;
 	}
