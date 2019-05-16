@@ -1,12 +1,7 @@
-/*
-.scrolling {
-	background-color: rgb(240, 240, 240);
-	width: 100% !important;
-	left: 0 !important;
-	margin-top: -8px !important;
-}
-*/
 
+/*
+  Responsible for animating the navbar to be full width
+*/
 function setScrolling() {
 	$("#nav").finish().animate({
 		"margin-top": "0px",
@@ -19,6 +14,9 @@ function setScrolling() {
   $(".hamburger").removeClass("change");
 }
 
+/*
+  Responsible for animating the navbar to be partial width and floating
+*/
 function remScrolling() {
 	$("#nav").finish().animate({
 		"margin-top": "20px",
@@ -33,10 +31,11 @@ function remScrolling() {
 
 
 // In descending order!
+// Used to assign locations for each section
 var sections = ["about", "projects", "experience", "contact"]
-
 var sectionPositions = [0, 0, 0];
 
+// Records offsets from the top for each section
 function loadSectionPositions() {
 	for (var i = 0; i < sections.length; i++) {
 		var pos = $("#" + sections[i]).offset().top - 100;
@@ -45,6 +44,7 @@ function loadSectionPositions() {
 	}
 }
 
+// Determines whether the navbar should be styled for mobile
 function testToResizeNavbar() {
 	if ($(this).width() <= 800) {
 		$(".nav-ul").addClass("nav-ul-mobile").removeClass("nav-ul");
@@ -52,9 +52,11 @@ function testToResizeNavbar() {
 		$(".nav-ul-mobile").addClass("nav-ul").removeClass("nav-ul-mobile");
 	}
 
+  // Go ahead and collapse the navbar
 	$("#nav").removeClass("nav-expanded");
   $(".hamburger").removeClass("change");
 
+  // Reposition the navbar 
   $("#nav").finish().animate({
     "left": $(this).scrollTop() == 0 ? $(".container").offset().left : 0
   }, 100);
@@ -64,30 +66,34 @@ $(document).ready(function() {
 	var scrollApplied = false;
 	var distance = $(this).scrollTop();
 
+  // If we are scrolling, set the scrollbar accordingly
 	if (distance > 0) {
 		setScrolling();
 
 		scrollApplied = true;
 	}
 
+  // Load the position offsets for each section and determine if we need to set the navbar for mobile
 	loadSectionPositions();
 	testToResizeNavbar();
 
+  // Event handler for scrolling the document
 	$(this).scroll(function() {
 		distance = $(this).scrollTop();
 
+    // If we weren't scrolling but start, apply the scroll settings
 		if (distance > 0 && !scrollApplied) {
 			setScrolling();
 
 			scrollApplied = true;
-		} else if (distance == 0 && scrollApplied) {
+		} else if (distance == 0 && scrollApplied) { // If we stop scrolling, remove the scroll settings
 
 			remScrolling();
 
 			scrollApplied = false;
 		}
 
-
+    // Set the navbar labels to be active depending which section we are scrolling at
 		for (var i = 0; i < sections.length; i++) {
 			if (distance > sectionPositions[i]) {
 				$(".goToSection").removeClass("active");
@@ -96,12 +102,18 @@ $(document).ready(function() {
 		}
 	});
 
+  /*
+    Click event handlers
+  */
+
+  // Responsible for animating the scroll back to the top of the page
 	$(".backToTop").click(function() {
 		$("html, body").stop().animate({
 	        scrollTop: 0
 	    }, 500);
 	})
 
+  // Opens the navbar menu in mobile
 	$(".expandNavigation").click(function(e) {
 		e.preventDefault();
 
@@ -109,6 +121,7 @@ $(document).ready(function() {
     $(".hamburger").toggleClass("change");
 	})
 
+  // Determine where to scroll based upon the section header we click on
 	$(".goToSection").click(function(e){
 		  e.preventDefault();
 
@@ -124,6 +137,7 @@ $(document).ready(function() {
     });
 })
 
+// Resize the navbar on window change. As well, load the section positions again.
 $(window).on("resize", function() {
 	testToResizeNavbar();
 
