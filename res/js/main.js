@@ -16,6 +16,7 @@ function setScrolling() {
 	}, 100);
 
 	$("#nav").removeClass("nav-expanded");
+  $(".hamburger").removeClass("change");
 }
 
 function remScrolling() {
@@ -27,9 +28,8 @@ function remScrolling() {
 	}, 100);
 
 	$("#nav").removeClass("nav-expanded");
+  $(".hamburger").removeClass("change");
 }
-
-
 
 
 // In descending order!
@@ -53,6 +53,11 @@ function testToResizeNavbar() {
 	}
 
 	$("#nav").removeClass("nav-expanded");
+  $(".hamburger").removeClass("change");
+
+  $("#nav").finish().animate({
+    "left": $(this).scrollTop() == 0 ? $(".container").offset().left : 0
+  }, 100);
 }
 
 $(document).ready(function() {
@@ -110,6 +115,7 @@ $(document).ready(function() {
 		  var to = $(this).attr("href");
 
       $("#nav").removeClass("nav-expanded");
+      $(".hamburger").removeClass("change");
 
     	$("html, body").stop().animate({
 	        scrollTop: $(to).offset().top - 50
