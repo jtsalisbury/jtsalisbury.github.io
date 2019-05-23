@@ -86,7 +86,7 @@
 					<div class="body-3-icon interests">
 					</div>
 					<div class="body-3-text">
-						In my free time, I enjoy learning new skills and expanding my programming skillset. As well, I enjoy participating in hackathons and organizing RevolutionUC, the University of Cincinnati's 24 hour hackathon.
+						In my free time, I enjoy learning new skills and expanding my programming skillset, gaming, and binge watching Netflix. As well, I enjoy participating in hackathons and organizing RevolutionUC, the University of Cincinnati's 24 hour hackathon (largest in Cincinnati!).
 					</div>
 				</div>
 				
@@ -101,17 +101,66 @@
 			<div class="container">
 				<div class="body">
 					<div class="body-text">
-						<ul>
-							<li>
-								<a href="https://github.com/KragleStudios/FactionWars" target="_blank">Faction Wars</a>
-								<ul>
-									<li>June 2016 - December 2016</li>
-									<li>A game mode written in Lua developed for the popular video game Garry's Mod.</li>
-									<li>Collaborated with a team of 10 others, contributing more than 16,000 lines of code with over 180 commits.</li>
-									<li>This project was completed in 2017, however it is no longer maintained.</li>
-								</ul>
-							</li>
-						</ul>
+						<a href="https://github.com/KragleStudios/FactionWars" target="_blank" class="body-title">Faction Wars</a>
+
+						<p class="body-subheader">Background</p>
+						<p class="body-subtext">
+							In 2016, a group of ten others and I decided to work on a massive scale gamemode for Garry's Mod. After hours of deliberation, we came up with Faction Wars. The gamemode premise is that of a combat oriented roleplay gamemode, where players join "factions". Players collaborate with their factions to launch wars, capture property, and construct illegal enterprises.
+						
+						<p class="body-subheader">Features</p>
+						<p class="body-subtext">
+							Below are some of the major features of the gamemode
+							<ul>
+								<li>Fully custom UI</li>
+								<li>42 custom entities such as tools, weapons, turrets, radars, and equipment / minerals (used for enterprise system)</li>
+								<li>Advanced resource system (includes crafting, etc.)</li>
+								<li>Factions (teams with the ability to share funds, capture land and more)</li>
+								<li>Zones (areas which can be captured by factions; can be customized by server admins for location and capturability)</li>
+								<li>In game voting system</li>
+							</ul>
+						</p>
+						
+						<p class="body-subheader">Contributions</p>
+						<p class="body-subtext">
+							This project was completed over a <b>seven month span</b> from June to December of 2016. During this project, I contributed more than <b>16,000 lines of code</b> with over <b>180 commits</b>. The scope of my work included all the major features listed above, plus things such as in-game chat commands and more.
+						</p>
+						<p class="body-subheader">Challenges</p>
+						<p class="body-subtext">
+							One of the major challenges was the team size. At eleven total contributors, the scale of the team for this project was somewhat large. It was difficult to manage who was doing what and to keep code consistent. We mitigated this risk by staying in constant communication on what we were doing. As well, we instituted a code style guide early, and used a Trello board to keep in depth descriptions of what we were doing and the status. Further, we would commit changes early and often to prevent conflicts and repeated work.
+							<br/><br/>
+							Another major challenge (for me) was the experience I had going into this project. I had never worked on a large scale project like this with others before, so I had to quickly learn how to do this. In addition to teamwork, my programming skills faced massive challenges. Features such as the turret, radar, voting system, and others, were out of my experience level. I had to continually research and learn to accomplish each task. By trial and error, I was able to create the fully functioning and intuitive features found above.
+						</p>
+
+						<div class="video-wrapper">
+							<div class="video-caption">
+								<p class="video-title">Player Menus and HUD</p>
+								This video showcases each of the in-game menus including the Players (where you can view other players), Jobs (where you can switch factions and roles), Items (where you can purchase resources, machines, and weapons), and the Faction menu (where you can manage the faction bank, and view other players in your faction). As well, you can view each aspect of the player's HUD, including health, money, faction, location, and notifications.
+							</div>
+							<video class="video-3" controls muted>
+								<source src="res/video/FactionWars_Menus_HUD.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<div class="video-wrapper">
+							<div class="video-caption">
+								<p class="video-title">Resources and Machinery</p>
+								In this video, we see how the resource system works. In this example, the player is trying to farm opiods to sell. To do that, the player needs an Opiod Refinery, which requires power, raw resources and water. Water is supplied through a container. Raw resources are mined through a Raw Resource Extractor, which requires power. Both machines are powered by a generator, which requires gas. From this, we can see how each system is linked and each subset is derived from another.
+							</div>
+							<video class="video-3" controls muted>
+								<source src="res/video/FactionWars_ResourceSystem.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<div class="video-wrapper">
+							<div class="video-caption">
+								<p class="video-title">Zones / Capturing</p>
+								In this video, we see how the player can view and capture zones. By holding the alt key and looking down, the player can see an auto generated map of preconfigured zones and who controls them. By using this map, players can find locations to capture. Once they enter the location, the majority faction begins to take it over, as is seen on the map.
+							</div>
+							<video class="video-3" controls muted>
+								<source src="res/video/FactionWars_Zones_Capturing.mp4" type="video/mp4">
+							</video>
+						</div>
+
 					</div>
 				</div>
 			</div>
