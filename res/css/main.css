@@ -300,7 +300,10 @@ a {
 .video-wrapper {
 	overflow: hidden;
 	width: 100%;
-	padding-top: 20px;
+}
+
+.video-wrapper:not(:first-of-type) {
+	padding-top: 16px;
 }
 
 .video-caption {
@@ -311,7 +314,7 @@ a {
 .video-title {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 0;
+	margin: 0;
 	font-weight: bold;
 }
 
@@ -443,5 +446,9 @@ video {
 
 	.video-caption {
 		width: 100%;
+	}
+
+	.body-subheader {
+		text-align: center;
 	}
 }
