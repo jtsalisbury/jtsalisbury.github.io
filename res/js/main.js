@@ -189,6 +189,8 @@ $(document).ready(function() {
 var previousWidth = 0;
 $(window).on("resize", function() {
   if (previousWidth != $(window).width()) {
+
+    alert(previousWidth + " " + $(window).width());
     testToResizeNavbar();
 
     loadSectionPositions();
