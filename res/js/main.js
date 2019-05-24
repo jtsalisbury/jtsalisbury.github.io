@@ -35,15 +35,6 @@ function remScrolling() {
 var sections = ["about", "projects", "experience", "contact"]
 var sectionPositions = [0, 0, 0];
 
-// Records offsets from the top for each section
-function loadSectionPositions() {
-	for (var i = 0; i < sections.length; i++) {
-		var pos = $("#" + sections[i]).offset().top - 100;
-
-		sectionPositions[i] = pos;
-	}
-}
-
 function doExpandableCollapse(target) {
   var end = target.find(".collapseTop");
 
@@ -95,8 +86,6 @@ $(document).ready(function() {
 		scrollApplied = true;
 	}
 
-  // Load the position offsets for each section and determine if we need to set the navbar for mobile
-	loadSectionPositions();
 	testToResizeNavbar();
 
   // Event handler for scrolling the document
@@ -117,7 +106,7 @@ $(document).ready(function() {
 
     // Set the navbar labels to be active depending which section we are scrolling at
 		for (var i = 0; i < sections.length; i++) {
-			if (distance > sectionPositions[i]) {
+			if (distance > $("#" + sections[i]).offset().top - 100) {
 				$(".goToSection").removeClass("active");
 				$(".goTo_" + sections[i]).addClass("active");
 			}
@@ -155,16 +144,19 @@ $(document).ready(function() {
   	$("html, body").stop().animate({
         scrollTop: $(to).offset().top - 50
     }, 500);
-
   });
 
+
+  // Logic for handling section expansion
   $(".expandSection").click(function(e) {
     e.preventDefault();
 
+    // Find the body for the corresponding expansion link
     var body = $(this).parent().siblings(".body-text");
 
     if (body.hasClass("expanded")) {
 
+      // Scroll to the top of the section and collapse it
       $("html, body").stop().animate({
           scrollTop: body.parent().parent().offset().top - 75
       }, 150);
@@ -176,6 +168,7 @@ $(document).ready(function() {
 
     } else {
       
+      // Expand the section
       body.stop().animate({
         height: body[0].scrollHeight+'px'
       }, 400);
@@ -192,8 +185,6 @@ $(document).ready(function() {
 $(window).on("resize", function() {
   if (previousWidth != $(window).width()) {
     testToResizeNavbar();
-
-    loadSectionPositions();
 
     setExpandableHeights();
 

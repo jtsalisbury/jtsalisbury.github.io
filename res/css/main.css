@@ -59,6 +59,8 @@ body {
 	border-color: rgb(240, 240, 240);
 
 	overflow: visible;
+
+	z-index: 300000;
 }
 
 .nav-ul {
