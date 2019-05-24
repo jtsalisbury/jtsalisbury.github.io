@@ -241,13 +241,14 @@ a {
 	display: flex;
 }
 
+.container:not(:first-of-type) {
+	padding-top: 10px;
+}
+
 .body-3 {
 	float: left;
 	width: calc(33.3% - 7px);
 	background-color: #f5f6f7;
-}
-
-.body-3:not(:first-child) {
 	margin-left: 10px;
 }
 
