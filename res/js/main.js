@@ -58,6 +58,8 @@ function setExpandableHeights() {
   $(".expandSection").text("Click to Read More");
   $(".expandable").removeClass("expanded");
 
+  alert("resizing all")
+
   $(".expandable").each(function(i, val) {
     doExpandableCollapse($(val));
   })
@@ -166,10 +168,9 @@ $(document).ready(function() {
           scrollTop: body.parent().parent().offset().top - 75
       }, 150);
 
+      doExpandableCollapse(body);  
 
-      doExpandableCollapse(body);      
       body.removeClass("expanded");
-
       $(this).text("Click to Read More");
 
     } else {
@@ -193,4 +194,3 @@ $(window).on("resize", function() {
 	loadSectionPositions();
   setExpandableHeights();
 })
-
