@@ -191,8 +191,6 @@ $(document).ready(function() {
 // Resize the navbar on window change. As well, load the section positions again.
 $(window).on("resize", function() {
   if (previousWidth != $(window).width()) {
-
-    alert(previousWidth + " " + $(window).width());
     testToResizeNavbar();
 
     loadSectionPositions();

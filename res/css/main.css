@@ -249,6 +249,9 @@ a {
 	margin-left: 10px;
 }
 
+.expandNavigation {
+	float: right;
+}
 
 .body {
 	float: left;
