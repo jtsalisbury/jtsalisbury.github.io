@@ -49,7 +49,7 @@ function doExpandableCollapse(target) {
 
   var h = end.offset().top - target.offset().top - end.height();
 
-  target.animate({
+  target.stop().animate({
     height: h
   }, 200);
 }
@@ -162,7 +162,7 @@ $(document).ready(function() {
 
     if (body.hasClass("expanded")) {
 
-      $("html, body").animate({
+      $("html, body").stop().animate({
           scrollTop: body.parent().parent().offset().top - 75
       }, 150);
 
@@ -173,8 +173,8 @@ $(document).ready(function() {
       $(this).text("Click to Read More");
 
     } else {
-            body.animate({
-
+      
+      body.stop().animate({
         height: body[0].scrollHeight+'px'
       }, 400);
 
