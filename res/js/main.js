@@ -58,8 +58,6 @@ function setExpandableHeights() {
   $(".expandSection").text("Click to Read More");
   $(".expandable").removeClass("expanded");
 
-  alert("resizing all")
-
   $(".expandable").each(function(i, val) {
     doExpandableCollapse($(val));
   })
@@ -190,7 +188,7 @@ $(document).ready(function() {
 // Resize the navbar on window change. As well, load the section positions again.
 var previousWidth = 0;
 $(window).on("resize", function() {
-  if (previousWidth !== $(window).width()) {
+  if (previousWidth != $(window).width()) {
     testToResizeNavbar();
 
     loadSectionPositions();
