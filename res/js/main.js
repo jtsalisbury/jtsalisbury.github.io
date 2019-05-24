@@ -81,7 +81,10 @@ function testToResizeNavbar() {
   }, 100);
 }
 
+var previousWidth = 0;
 $(document).ready(function() {
+  previousWidth = $(window).width();
+
 	var scrollApplied = false;
 	var distance = $(this).scrollTop();
 
@@ -186,7 +189,6 @@ $(document).ready(function() {
 })
 
 // Resize the navbar on window change. As well, load the section positions again.
-var previousWidth = 0;
 $(window).on("resize", function() {
   if (previousWidth != $(window).width()) {
 
