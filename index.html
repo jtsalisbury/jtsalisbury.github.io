@@ -7,10 +7,20 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 		<link rel="stylesheet" href="./res/css/main.css">
+		<head>
+    <link type="text/css" rel="stylesheet" href="./res/css/lightGallery.css" /> 
+</head>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+
+		<script src="./res/js/lightgallery.min.js"></script>
+		<script src="./res/js/lg-thumbnail.min.js"></script>
+    <script src="./res/js/lg-fullscreen.min.js"></script>
+
 		<script src="./res/js/main.js"></script>
+
 	</head>
 	<body>
 		<div id="bg">
@@ -172,31 +182,84 @@
 				</div>
 			</div>
 
-			<!--<div class="container">
+			<div class="container">
 				<div class="body">
 					<div class="body-text expandable">
 						<div class="body-title">
-							<a href="https://github.com/jtsalisbury/AdminMe" target="_blank">AdminMe</a>
+							<a href="https://github.com/jtsalisbury/adminme" target="_blank">AdminMe</a>
 						</div>
 
 						<p class="body-subheader">Background</p>
 						<p class="body-subtext">
-							
+							AdminMe was a personal project started in early 2017. The goal was to create a comprehensive administration system for Garry's Mod utilizing an in-game and web platforms. While playing, administrators can manage users, bans and more with over 50 commands and an intuitive UI. The web system allows users to login via Steam and customize aspects such as ranks, users, and more. 
 						</p>
 
 						<p class="body-subheader collapseTop">Features</p>
 						<p class="body-subtext">
-							
+							The in-game platform features the following
+							<ul>
+								<li>Fully custom and intuitive UI</li>
+								<ul>
+									<li>UI allows you to execute commands, view warnings / player events / logs, manage bans, and manage music</li>
+								</ul>
+								<li>Over 50 commands to perform actions such as banning / kicking players, teleporting, reporting</li>
+								<ul>
+									<li>Each command can be ran from chat, the developer console, or the UI</li>
+								</ul>
+							</ul>
+
+							The web platform features the following
+							<ul>
+								<li>Intuitive UI via LuminoAdmin panel</li>
+								<li>Login integration via SteamAuth, which verifies you also are the correct rank to have access</li>
+								<li>Ability to manage users, ranks and permissions, view logs / warnings, and manage bans. As well, publically, the site has a User List and Ban List, which anyone may see</li>
+							</ul>
+
+							Additional planned features include
+							<ul>
+								<li>Revised timed rank integration</li>
+								<li>More visually appealing in-game menu</li>
+								<li>Direct server communication from the web platform via sockets</li>
+								<ul>
+									<li>This would allow for server administration without being in-game, as well as the ability to view server output directly</li>
+								</ul>
+							</ul>
 						</p>
 						
 						<p class="body-subheader">Contributions</p>
 						<p class="body-subtext">
-							
+							This project was started in 2017 and has been improved upon since. I am currently working on the third revision (started in early 2018). I have contributed most of the code, besides the UI for the web platform, teleportation commands, and in-game command parser. Total, this leads to around <b>4000 lines of code</b> for the in-game system. 
 						</p>
 						<p class="body-subheader">Challenges</p>
 						<p class="body-subtext">
-							
+							One of the major challenges was learning how to manage a project of this scope by myself. Because this was an individual project, I had no idea where to begin and how to move forward. I began by referencing other administration addons, and then compiling key features I wanted on Trello. By staying organized and detailing ideas, I was able to begin developing the base and then branched out to other key features.
 						</p>
+
+						<p class="body-subheader">GitHub links</p>
+						<p class="body-subtext">
+							<ul>
+								<li><a href="https://github.com/jtsalisbury/adminme" target="_blank">AdminMe in-game system</a></li>
+								<li><a href="https://github.com/jtsalisbury/adminme_site" target="_blank">AdminMe web platform</a></li>
+							</ul>
+						</p>
+
+						<p class="body-subheader">Gallery</p>
+						<div id="adminme-gallery">
+							<a href="./res/img/adminme/ig-bans.png" data-sub-html="<h4>In-game Ban Menu</h4><p>This menu allows the admin to view and manage active bans.</p>"><img class="img-responsive" src="./res/img/adminme/ig-bans.png" /></a>
+							<a href="./res/img/adminme/ig-chat.jpg" data-sub-html="<h4>Chat Commands</h4><p>This demonstrates how commands can be ran from the chat menu.</p>"><img class="img-responsive" src="./res/img/adminme/ig-chat.jpg" /></a>
+							<a href="./res/img/adminme/ig-cmds.png" data-sub-html="<h4>Commands Menu</h4><p>This shows how you can search for a command along with the auto-generated layout for executing commands.</p>"><img class="img-responsive" src="./res/img/adminme/ig-cmds.png" /></a>
+							<a href="./res/img/adminme/ig-cmds2.png" data-sub-html="<h4>Commands Menu - No Search</h4><p>This shows what the command list looks like without searching.</p>"><img class="img-responsive" src="./res/img/adminme/ig-cmds2.png" /></a>
+							<a href="./res/img/adminme/ig-pe.png" data-sub-html="<h4>Player Events Menu</h4><p>This shows the menu with player events. Any administrative actions along with kills, deaths, etc., are shown here.</p>"><img class="img-responsive" src="./res/img/adminme/ig-pe.png" /></a>
+							<a href="./res/img/adminme/ig-report.png" data-sub-html="<h4>Report Menu</h4><p>This shows the UI for managing reports. When a player files a report against another, admins can view them here.</p>"><img class="img-responsive" src="./res/img/adminme/ig-report.png" /></a>
+							<a href="./res/img/adminme/ig-warn.png" data-sub-html="<h4>In-game Warning Menu</h4><p>When an admin warns a player, a record is made. Here, those records can be searched for and viewed.</p>"><img class="img-responsive" src="./res/img/adminme/ig-warn.png" /></a>
+
+							<a href="./res/img/adminme/web-landing.png" data-sub-html="<h4>Web Landing Page</h4><p>Once a user logs in via Steam, they are taken to the dashboard. On the main page, server statistics are shown.</p>"><img class="img-responsive" src="./res/img/adminme/web-landing.png" /></a>
+							<a href="./res/img/adminme/web-usermgmt.png" data-sub-html="<h4>Web Users</h4><p>Here, admins can modify what users have which ranks.</p>"><img class="img-responsive" src="./res/img/adminme/web-usermgmt.png" /></a>
+							<a href="./res/img/adminme/web-logs.png" data-sub-html="<h4>Web Logs</h4><p>On this page you can view the in game server logs.</p>"><img class="img-responsive" src="./res/img/adminme/web-logs.png" /></a>
+							<a href="./res/img/adminme/web-bans.png" data-sub-html="<h4>Web Bans</h4><p>Admins can use this page to add bans or remove them. As well, they can search for and view additional details for each.</p>"><img class="img-responsive" src="./res/img/adminme/web-bans.png" /></a>
+							<a href="./res/img/adminme/web-warnings.png" data-sub-html="<h4>Web Warnings</h4><p>Warnings for all players can be found here. Admins can view additional details and delete warnings.</p>"><img class="img-responsive" src="./res/img/adminme/web-warnings.png" /></a>
+							<a href="./res/img/adminme/web-public-bans.png" data-sub-html="<h4>Web Public - Bans</h4><p>One of two public pages is the Ban List. Anyone can visit this page to view and search all bans.</p>"><img class="img-responsive" src="./res/img/adminme/web-public-bans.png" /></a>
+						</div>
 					</div>
 
 					<div class="body-footer">
@@ -205,7 +268,27 @@
 						</a>
 					</div>
 				</div>
-			</div>-->
+			</div>
+
+			<div class="container github-projects">
+				<div class="body">
+					<div class="body-text">
+						<div class="body-title">
+							<a href="https://github.com/jtsalisbury/" target="_blank">Other Projects</a>
+						</div>
+
+						<p>
+							All of my smaller GitHub projects can be found below! Click on each to be taken to the repository
+						</p>
+
+						<ul class="github-projects-list">
+							<div class="gh-backup" style="display: none;">
+								<li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/21-gmod-addons">21-gmod-addons</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/adminme">adminme</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/adminme_site">adminme_site</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/cathacks-iv">cathacks-iv</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/cpp-tic_tac_toe">cpp-tic_tac_toe</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/darkrp-anti-prop-kill">darkrp-anti-prop-kill</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/darkrp-atm">darkrp-atm</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/darkrp-mayor_menu">darkrp-mayor_menu</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/darkrp-mayor_menu_economy">darkrp-mayor_menu_economy</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/darkrp-mayor_menu_upgrades">darkrp-mayor_menu_upgrades</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/darkrp-raidable-bank">darkrp-raidable-bank</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/EECE2080C-Data-Structures-Projects">EECE2080C-Data-Structures-Projects</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/gmod-darkrp-stocks">gmod-darkrp-stocks</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/gmod-report-system">gmod-report-system</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/gmod12to13-addons">gmod12to13-addons</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/HouseHub-Android">HouseHub-Android</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/HouseHub-WebApp">HouseHub-WebApp</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/java-planner">java-planner</a></li><li><a class="github-project" target="_blank" href="https://github.com/jtsalisbury/jtsalisbury.github.io">jtsalisbury.github.io</a></li>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
 
 
 			<!--<div class="container">
@@ -247,26 +330,30 @@
 
 			<div class="container">
 				<div class="body">
-					
 					<div class="body-text">
-						<ul>
-							<li>
-								<a href="https://www.bmwusfactory.com/" target="_blank">BMW Manufacturing Co., Intern</a>
-								<ul>
-									<li>Fall 2017, Summer 2018, Spring 2019</li>
-									<li>Full-time, Assembly, VPS (Value Added Production Systems) Assembly Group</li>
-									<li>Collaborated with colleagues to implement a new standard for Work Organization on the assembly floor.</li>
-									<li>Assisted full time VPS Integrators in training process supporters and section leaders on the new Work Organization. </li>
-									<li>Collaborated with co-workers and departments to design and create web applications for use by associates.</li>
-									<li>Responsible for driving and maintaining meeting structures, along with recording events and action items.
-									<li>Developed data analytics tools to comprehensively view trends in data.</li>
-									<li>Recorded fault data for various automated systems, compiling it to effective and complete visuals.</li>
-									<li>Performed weekly audits of the assembly floor to ensure compliance to 6S Standards.</li>
-									<li>Improved work order request system through Microsoft SharePoint for use by the Value-Added Production workshop.</li>
-									<li>Incorporated new ways to improve safety and quality on the assembly floor through Poka Yoke solutions.</li>
-								</ul>
-							</li>
-						</ul>
+						<div class="body-title">
+							<a href="https://www.bmwusfactory.com/" target="_blank">BMW Manufacturing Co., Intern</a>
+						</div>
+
+						<p class="body-subheader">Timeframe</p>
+						<p class="body-subtext">
+							I spent three rotations with BMW in Fall of 2017, Summer of 2018 and Spring of 2019. My first two rotations were with VPS (Value Added Production Systems) Assembly, and my final rotation was as an assembly intern for engines, powertrain, and marriage.
+						</p>
+
+						<p class="body-subheader">Responsibilities</p>
+						<p class="body-subtext">
+							<ul>
+								<li>Collaborated with colleagues to implement a new standard for Work Organization on the assembly floor.</li>
+								<li>Assisted full time VPS Integrators in training process supporters and section leaders on the new Work Organization. </li>
+								<li>Collaborated with co-workers and departments to design and create web applications for use by associates.</li>
+								<li>Responsible for driving and maintaining meeting structures, along with recording events and action items.
+								<li>Developed data analytics tools to comprehensively view trends in data.</li>
+								<li>Recorded fault data for various automated systems, compiling it to effective and complete visuals.</li>
+								<li>Performed weekly audits of the assembly floor to ensure compliance to 6S Standards.</li>
+								<li>Improved work order request system through Microsoft SharePoint for use by the Value-Added Production workshop.</li>
+								<li>Incorporated new ways to improve safety and quality on the assembly floor through Poka Yoke solutions.</li>
+							</ul>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -280,6 +367,25 @@
 			<div class="container">
 				<div class="body">
 					<div class="body-text">
+						<p class="body-subtext">Interested in getting to know me? Check me out at the following places!</p>
+
+						<b>Email</b>
+						<p class="body-subtext">
+							Shoot me an email at <a target="_blank" href="mailto:salisbjh@mail.uc.edu">salisbjh@mail.uc.edu</a>
+						</p>
+
+						<b>GitHub</b>
+						<p class="body-subtext">
+							Visit my <a target="_blank" href="https://github.com/jtsalisbury/">GitHub page</a>
+						</p>
+
+						<b>LinkedIn</b>
+						<p class="body-subtext">
+							Connect with me on <a target="_blank" href="https://www.linkedin.com/in/jtsalisbury/">LinkedIn</a>
+						</p>
+
+
+					<!--<div class="body-text">
 						<ul>
 							<li>
 								Interested in getting to know me? Check me out at the following places!
@@ -296,7 +402,7 @@
 									</li>
 								</ul>
 							</li>
-						</ul>
+						</ul>-->
 					</div>
 
 				</div>

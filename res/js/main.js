@@ -72,6 +72,29 @@ function testToResizeNavbar() {
   }, 100);
 }
 
+// Helper function to load repos
+function loadRepos() {
+  $.ajaxSetup({ cache: true });
+  jQuery.getJSON('https://api.github.com/users/jtsalisbury/repos?callback=?',function(data) {
+    var repos = data.data;
+
+    if (repos.message) {
+      $(".gh-backup").css("display", "inline");
+      return;
+    }
+
+    repos.sort(function(a, b) {
+      return a.name - b.name;
+    })
+
+    console.log(repos);
+
+    $(repos).each(function() {
+      $(".github-projects-list").append("<li><a class='github-project' target='_blank' href='" + this.html_url + "'>" + this.name + "</a></li>");
+    })
+  })
+}
+
 var previousWidth = 0;
 $(document).ready(function() {
   previousWidth = $(window).width();
@@ -179,6 +202,14 @@ $(document).ready(function() {
   })
 
   setExpandableHeights();
+
+  // Setup the image gallery for adminme
+  $("#adminme-gallery").lightGallery({
+    thumbnail: true,
+    showThumbByDefault: true
+  });
+
+  loadRepos();
 })
 
 // Resize the navbar on window change. As well, load the section positions again.

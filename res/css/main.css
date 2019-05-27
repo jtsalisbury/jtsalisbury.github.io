@@ -60,7 +60,7 @@ body {
 
 	overflow: visible;
 
-	z-index: 300000;
+	z-index: 1000;
 }
 
 .nav-ul {
@@ -316,6 +316,14 @@ a {
 	margin-top: 0;
 }
 
+.adminme-gallery {
+	max-width: 100%;
+}
+
+.img-responsive {
+	width: 190px;
+}
+
 .video-wrapper {
 	overflow: hidden;
 	width: 100%;
@@ -373,7 +381,29 @@ video {
 	border-radius: 50%;
 }
 
+.github-projects {
 
+}
+
+.github-projects-list {
+	list-style: none;
+	width: 100%;
+	padding-left: 0px;
+}
+
+.github-project {
+	display: inline;
+	float: left;
+	padding: 5px 10px 5px 10px;
+	margin: 5px;
+	background-color: #2980b9;
+	color: white;
+	border-radius: 25px;
+}
+
+.github-project:hover {
+	background-color: #3498db;
+}
 
 
 
