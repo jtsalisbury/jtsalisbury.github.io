@@ -321,7 +321,8 @@ a {
 }
 
 .img-responsive {
-	width: 190px;
+	max-width: 190px;
+	max-height: 100px;
 }
 
 .video-wrapper {

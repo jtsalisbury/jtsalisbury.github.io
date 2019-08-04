@@ -209,6 +209,11 @@ $(document).ready(function() {
     showThumbByDefault: true
   });
 
+  $("#househub-gallery").lightGallery({
+    thumbnail: true,
+    showThumbByDefault: true
+  });
+
   loadRepos();
 })
 
