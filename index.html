@@ -98,108 +98,107 @@
 			<div class="section-header">
 				Projects
 			</div>
-
 			<div class="container">
-        <div class="body">
-          <div class="body-text expandable">
-            <div class="body-title">
-              <a href="http://www.jtsalisbury.tech/sites/househub/site/account/login.php" target="_blank">HouseHub</a>
-            </div>
-            <p class="body-subheader">Background</p>
-            <p class="body-subtext">
-              HouseHub was the product of a semester-long Software Engineering project during the summer of 2019. The goal was to follow the formulation of a product while following common Software Engineering practices. These included those such as requirements gathering, security analysis, and more. HouseHub specifically had the goal of connecting students at UC who wanted to fill a sublease with those looking to acquire a sublease. HouseHub was implemented as a WebApp and on Android, with an independent custom-built API, which allowed for efficient interfacing between each platform and the database. For the API, since we were transmitting sensitive user data, such as e-mails and passwords, we implemented JSON Web Token standards. This allowed us to generate a payload (JSON string of the data) and then encrypt it, and then using this we would generate a separate hash which would be sent with the encrypted payload. This ensured that the data wouldn't be plain text, and then we could also verify the integrity of the data (ensure it came from a valid source) by validating the hash. 
-            </p>
-            <p class="body-subheader collapseTop">Features</p>
-            <p class="body-subtext">
-              The WebApp featured the following
-              <ul>
-                <li>Registration/Login/Logout system</li>
-                <li>Ability to view all available listings</li>
-                <li>Ability to view all available listings in a detailed view</li>
-                <li>Ability to sort listings based upon price or created date</li>
-                <li>Users can save or unsave listings to come back to later</li>
-                <li>Filter listings based on specific text, min/max prices, My Listings, and My Saved Listings</li>
-                <li>Users can post and update listings which they have posted</li>
-                <li>Users can hide/unhide a listing they have posted</li>              
-                <li>Users can view account information for their account and others</li>
-                <li>Users can update their account information</li>
-                <li>All user forms provide error checking and feedback for incorrect entries</li>
-              </ul>
+				<div class="body">
+					<div class="body-text expandable">
+						<div class="body-title">
+						<a href="http://www.jtsalisbury.tech/sites/househub/site/account/login.php" target="_blank">HouseHub</a>
+						</div>
+						<p class="body-subheader">Background</p>
+						<p class="body-subtext">
+						HouseHub was the product of a semester-long Software Engineering project during the summer of 2019. The goal was to follow the formulation of a product while following common Software Engineering practices. These included those such as requirements gathering, security analysis, and more. HouseHub specifically had the goal of connecting students at UC who wanted to fill a sublease with those looking to acquire a sublease. HouseHub was implemented as a WebApp and on Android, with an independent custom-built API, which allowed for efficient interfacing between each platform and the database. For the API, since we were transmitting sensitive user data, such as e-mails and passwords, we implemented JSON Web Token standards. This allowed us to generate a payload (JSON string of the data) and then encrypt it, and then using this we would generate a separate hash which would be sent with the encrypted payload. This ensured that the data wouldn't be plain text, and then we could also verify the integrity of the data (ensure it came from a valid source) by validating the hash. 
+						</p>
+						<p class="body-subheader collapseTop">Features</p>
+						<p class="body-subtext">
+						The WebApp featured the following
+						<ul>
+							<li>Registration/Login/Logout system</li>
+							<li>Ability to view all available listings</li>
+							<li>Ability to view all available listings in a detailed view</li>
+							<li>Ability to sort listings based upon price or created date</li>
+							<li>Users can save or unsave listings to come back to later</li>
+							<li>Filter listings based on specific text, min/max prices, My Listings, and My Saved Listings</li>
+							<li>Users can post and update listings which they have posted</li>
+							<li>Users can hide/unhide a listing they have posted</li>              
+							<li>Users can view account information for their account and others</li>
+							<li>Users can update their account information</li>
+							<li>All user forms provide error checking and feedback for incorrect entries</li>
+						</ul>
 
-              Below are some of the features we wanted to implement but weren't able to get to on the WebApp.
-              <ul>
-                <li>Allow users to delete their listings</li>
-                <li>Allow users to deactivate their account</li>
-                <li>Option on the Login screen for users who had forgotten their password</li>
-                <li>Account e-mail activation</li>
-                <li>Administration features such as reporting listings, ability to delete listings, ability to delete users</li>
-                <li>Semester availability options</li>
-                <ul>
-                  <li>Allow users to check specific available semesters when posting a listing</li>
-                </ul>
-                <li>Ensure listings are within a two mile radius (utilize Google Distance API)</li>
-                <li>Fully responsive WebApp</li>
-                <li>HTTPS to ensure the data being transmitted between the front-end and back-end was encrypted</li>
-                <ul>
-                  <li>If this were a production environment this would be a major priority. But because this is a school project we decided to not move forward with this due to the cost of securing a trusted certificate</li>
-                </ul>
-              </ul>
+						Below are some of the features we wanted to implement but weren't able to get to on the WebApp.
+						<ul>
+							<li>Allow users to delete their listings</li>
+							<li>Allow users to deactivate their account</li>
+							<li>Option on the Login screen for users who had forgotten their password</li>
+							<li>Account e-mail activation</li>
+							<li>Administration features such as reporting listings, ability to delete listings, ability to delete users</li>
+							<li>Semester availability options</li>
+							<ul>
+							<li>Allow users to check specific available semesters when posting a listing</li>
+							</ul>
+							<li>Ensure listings are within a two mile radius (utilize Google Distance API)</li>
+							<li>Fully responsive WebApp</li>
+							<li>HTTPS to ensure the data being transmitted between the front-end and back-end was encrypted</li>
+							<ul>
+							<li>If this were a production environment this would be a major priority. But because this is a school project we decided to not move forward with this due to the cost of securing a trusted certificate</li>
+							</ul>
+						</ul>
 
-              The Android App features the following
-              <ul>
-                <li>Login/Registration/Logout system</li>
-                <li>View all available listings</li>
-                <li>View a listing in detail</li>
-                <li>Sort and Filter listings based on price, specific text, My Listings, My Saved Listings</li>
-                <li>View account information</li>
-              </ul>
+						The Android App features the following
+						<ul>
+							<li>Login/Registration/Logout system</li>
+							<li>View all available listings</li>
+							<li>View a listing in detail</li>
+							<li>Sort and Filter listings based on price, specific text, My Listings, My Saved Listings</li>
+							<li>View account information</li>
+						</ul>
 
-              In addition to those completed on the Android app, we aimed to have the feature sets be equivalent; that is, we wanted the Android app and WebApp to be equivalent, however due to our strict timeline, we weren't able to implement all features on Android.
-            </p>
-            <p class="body-subheader">Contributions</p>
-            <p class="body-subtext">
-              This project was started in May of 2019 and ended at the beginning of August in 2019. During May and June, most of our priorities were given to documentation; things such as Requirements Gathering & Analysis, Design Overview, UML Models, Security/Risk Analysis, and Test Plan. In July we started development on the API and WebApp, where I contributed over <strong>5,000 lines of code</strong>. We implemented these using PHP, HTML & CSS, JavaScript, jQuery and Bootstrap. After developing the API and WebApp, I contributed to the Android app (written in Kotlin) with more than <strong>1,000</strong> lines of code.
-            </p>
-            <p class="body-subheader">Challenges</p>
-            <p class="body-subtext">
-              One of the major challenges was navigating the group dynamic. I took on the role of the Project Manager and was responsible for ensuring everything was appropriately timelined with a team of four others. One of the issues our team faced was conflict when coming up with the project. We originally had a different idea, but decided to change, which one of our members disagreed with. This resulted in un-needed conflict within the group but was effectively managed by describing why we decided to change, along with being mature and approaching the conversation with open minds. 
-              <br /><br />
-              Another challenge was from the project management side. My initial role as Project Manager included that I float between both the WebApp and Android teams, to help develop the projects in tandem and ensure seamless functionality. However, I spent most of my time working on the API and WebApp, which resulted in the Android app missing many of the key features. In turn, the Android team and I worked quickly to develop several of the features we felt were most important to meet the end of the semester deadline. In the future, I now recognize how important it is to develop these different platforms in tandem and keep communication between myself and each team thorough. This way, everyone is on the same page and knows exactly what should be developed, along with how to do it.
-              <br /><br />
-              The third challenge I felt was most difficult to overcome was the massive course/workload each of our team members had. During the summer, we each were taking 18 credit hours of core classes. These core classes each were extremely demanding, and at times we weren't able to put as much time into developing this project as we would have liked. As well, the class we were developing HouseHub for focused more on process than project, so we spent a lot of time creating documentation rather than developing. In the future, I would approach the solution to this problem by beginning with a smaller feature set and not overcomplicating the project. As well, I would push the other team members such that we all put in a substantial amount of effort to successfully, and effectively, produce a thorough product. 
-            </p>
-            <p class="body-subheader">GitHub links</p>
-            <p class="body-subtext">
-              <ul>
-                <li><a href="https://github.com/jtsalisbury/househub-api" target="_blank">HouseHub API</a></li>
-                <li><a href="https://github.com/jtsalisbury/househub-webapp" target="_blank">HouseHub WebApp</a></li>
-                <li><a href="https://github.com/jtsalisbury/househub-android" target="_blank">HouseHub Android App</a></li>
-              </ul>
-            </p>
-            <p class="body-subheader">Gallery</p>
-            <div id="househub-gallery">
-              <a href="./res/img/househub/wa-login.JPG" data-sub-html="<h4>WebApp Login</h4><p>This form allows the user to login or navigate to registration.</p>"><img class="img-responsive" src="./res/img/househub/wa-login.JPG" alt="gallery-img"/></a>
-              <a href="./res/img/househub/wa-register.JPG" data-sub-html="<h4>WebApp Registration</h4><p>This allows users to create an account if they don't already have one.</p>"><img class="img-responsive" src="./res/img/househub/wa-register.JPG" alt="gallery-img"/></a>
-              <a href="./res/img/househub/wa-viewall.JPG" data-sub-html="<h4>WebApp View All Listings</h4><p>This page is the landing page once a user is logged in, and allows for the viewing of all listings, along with saving and sorting.</p>"><img class="img-responsive" src="./res/img/househub/wa-viewall.JPG" alt="gallery-img" /></a>
-              <a href="./res/img/househub/wa-viewone.JPG" data-sub-html="<h4>WebApp Detail Listing View</h4><p>This page provides information about the listing in detail, and is where one may go to modify a posted listing.</p>"><img class="img-responsive" src="./res/img/househub/wa-viewone.JPG" alt="gallery-img" /></a>
-              <a href="./res/img/househub/wa-post-update-listing.JPG" data-sub-html="<h4>WebApp Listing Post / Update</h4><p>This form is how a user would post a listing or (in this case) it is autofilled with existing information which can be updated</p>"><img class="img-responsive" src="./res/img/househub/wa-post-update-listing.JPG" alt="gallery-img" /></a>
-              <a href="./res/img/househub/wa-update-user.JPG" data-sub-html="<h4>WebApp Update User</h4><p>This page allows for the user to update their account information</p>"><img class="img-responsive" src="./res/img/househub/wa-update-user.JPG" alt="gallery-img" /></a>
+						In addition to those completed on the Android app, we aimed to have the feature sets be equivalent; that is, we wanted the Android app and WebApp to be equivalent, however due to our strict timeline, we weren't able to implement all features on Android.
+						</p>
+						<p class="body-subheader">Contributions</p>
+						<p class="body-subtext">
+						This project was started in May of 2019 and ended at the beginning of August in 2019. During May and June, most of our priorities were given to documentation; things such as Requirements Gathering & Analysis, Design Overview, UML Models, Security/Risk Analysis, and Test Plan. In July we started development on the API and WebApp, where I contributed over <strong>5,000 lines of code</strong>. We implemented these using PHP, HTML & CSS, JavaScript, jQuery and Bootstrap. After developing the API and WebApp, I contributed to the Android app (written in Kotlin) with more than <strong>1,000</strong> lines of code.
+						</p>
+						<p class="body-subheader">Challenges</p>
+						<p class="body-subtext">
+						One of the major challenges was navigating the group dynamic. I took on the role of the Project Manager and was responsible for ensuring everything was appropriately timelined with a team of four others. One of the issues our team faced was conflict when coming up with the project. We originally had a different idea, but decided to change, which one of our members disagreed with. This resulted in un-needed conflict within the group but was effectively managed by describing why we decided to change, along with being mature and approaching the conversation with open minds. 
+						<br /><br />
+						Another challenge was from the project management side. My initial role as Project Manager included that I float between both the WebApp and Android teams, to help develop the projects in tandem and ensure seamless functionality. However, I spent most of my time working on the API and WebApp, which resulted in the Android app missing many of the key features. In turn, the Android team and I worked quickly to develop several of the features we felt were most important to meet the end of the semester deadline. In the future, I now recognize how important it is to develop these different platforms in tandem and keep communication between myself and each team thorough. This way, everyone is on the same page and knows exactly what should be developed, along with how to do it.
+						<br /><br />
+						The third challenge I felt was most difficult to overcome was the massive course/workload each of our team members had. During the summer, we each were taking 18 credit hours of core classes. These core classes each were extremely demanding, and at times we weren't able to put as much time into developing this project as we would have liked. As well, the class we were developing HouseHub for focused more on process than project, so we spent a lot of time creating documentation rather than developing. In the future, I would approach the solution to this problem by beginning with a smaller feature set and not overcomplicating the project. As well, I would push the other team members such that we all put in a substantial amount of effort to successfully, and effectively, produce a thorough product. 
+						</p>
+						<p class="body-subheader">GitHub links</p>
+						<p class="body-subtext">
+						<ul>
+							<li><a href="https://github.com/jtsalisbury/househub-api" target="_blank">HouseHub API</a></li>
+							<li><a href="https://github.com/jtsalisbury/househub-webapp" target="_blank">HouseHub WebApp</a></li>
+							<li><a href="https://github.com/jtsalisbury/househub-android" target="_blank">HouseHub Android App</a></li>
+						</ul>
+						</p>
+						<p class="body-subheader">Gallery</p>
+						<div id="househub-gallery">
+						<a href="./res/img/househub/wa-login.JPG" data-sub-html="<h4>WebApp Login</h4><p>This form allows the user to login or navigate to registration.</p>"><img class="img-responsive" src="./res/img/househub/wa-login.JPG" alt="gallery-img"/></a>
+						<a href="./res/img/househub/wa-register.JPG" data-sub-html="<h4>WebApp Registration</h4><p>This allows users to create an account if they don't already have one.</p>"><img class="img-responsive" src="./res/img/househub/wa-register.JPG" alt="gallery-img"/></a>
+						<a href="./res/img/househub/wa-viewall.JPG" data-sub-html="<h4>WebApp View All Listings</h4><p>This page is the landing page once a user is logged in, and allows for the viewing of all listings, along with saving and sorting.</p>"><img class="img-responsive" src="./res/img/househub/wa-viewall.JPG" alt="gallery-img" /></a>
+						<a href="./res/img/househub/wa-viewone.JPG" data-sub-html="<h4>WebApp Detail Listing View</h4><p>This page provides information about the listing in detail, and is where one may go to modify a posted listing.</p>"><img class="img-responsive" src="./res/img/househub/wa-viewone.JPG" alt="gallery-img" /></a>
+						<a href="./res/img/househub/wa-post-update-listing.JPG" data-sub-html="<h4>WebApp Listing Post / Update</h4><p>This form is how a user would post a listing or (in this case) it is autofilled with existing information which can be updated</p>"><img class="img-responsive" src="./res/img/househub/wa-post-update-listing.JPG" alt="gallery-img" /></a>
+						<a href="./res/img/househub/wa-update-user.JPG" data-sub-html="<h4>WebApp Update User</h4><p>This page allows for the user to update their account information</p>"><img class="img-responsive" src="./res/img/househub/wa-update-user.JPG" alt="gallery-img" /></a>
 
-              <a href="./res/img/househub/a-login.png" data-sub-html="<h4>Android Login</h4><p>This shows the layout for how a user would login to the Android app.</p>"><img class="img-responsive" src="./res/img/househub/a-login.png" alt="gallery-img" /></a>
-              <a href="./res/img/househub/a-register.png" data-sub-html="<h4>Android Register</h4><p>This shows the layout for how a user can register with the Android app.</p>"><img class="img-responsive" src="./res/img/househub/a-register.png" alt="gallery-img" /></a>
-              <a href="./res/img/househub/a-viewall.png" data-sub-html="<h4>Android View All Listings</h4><p>This page is the landing page once a user is logged in, and allows for the viewing of all listings, along with the ability to sort based off price, specific text, and more.</p>"><img class="img-responsive" src="./res/img/househub/a-viewall.png" alt="gallery-img" /></a>
-              <a href="./res/img/househub/a-viewone.png" data-sub-html="<h4>Android Detail Listing View</h4><p>TThis page provides information about the listing in detail.</p>"><img class="img-responsive" src="./res/img/househub/a-viewone.png" alt="gallery-img" /></a>
-              <a href="./res/img/househub/a-nav.png" data-sub-html="<h4>Android Navigation</h4><p>This image shows the simple toolbar employed for easy app navigation.</p>"><img class="img-responsive" src="./res/img/househub/a-nav.png" alt="gallery-img" /></a>
+						<a href="./res/img/househub/a-login.png" data-sub-html="<h4>Android Login</h4><p>This shows the layout for how a user would login to the Android app.</p>"><img class="img-responsive" src="./res/img/househub/a-login.png" alt="gallery-img" /></a>
+						<a href="./res/img/househub/a-register.png" data-sub-html="<h4>Android Register</h4><p>This shows the layout for how a user can register with the Android app.</p>"><img class="img-responsive" src="./res/img/househub/a-register.png" alt="gallery-img" /></a>
+						<a href="./res/img/househub/a-viewall.png" data-sub-html="<h4>Android View All Listings</h4><p>This page is the landing page once a user is logged in, and allows for the viewing of all listings, along with the ability to sort based off price, specific text, and more.</p>"><img class="img-responsive" src="./res/img/househub/a-viewall.png" alt="gallery-img" /></a>
+						<a href="./res/img/househub/a-viewone.png" data-sub-html="<h4>Android Detail Listing View</h4><p>TThis page provides information about the listing in detail.</p>"><img class="img-responsive" src="./res/img/househub/a-viewone.png" alt="gallery-img" /></a>
+						<a href="./res/img/househub/a-nav.png" data-sub-html="<h4>Android Navigation</h4><p>This image shows the simple toolbar employed for easy app navigation.</p>"><img class="img-responsive" src="./res/img/househub/a-nav.png" alt="gallery-img" /></a>
 
-            </div>
-          </div>
-          <div class="body-footer">
-            <a href="#" class="expandSection">
-            Click to Read More
-            </a>
-          </div>
-        </div>
-      </div>
+						</div>
+					</div>
+					<div class="body-footer">
+						<a href="#" class="expandSection">
+						Click to Read More
+						</a>
+					</div>
+				</div>
+			</div>
 
 			<div class="container">
 				<div class="body">
@@ -394,11 +393,33 @@
 				<div class="body">
 					<div class="body-text">
 						<div class="body-title">
-							<a href="https://www.bmwusfactory.com/" target="_blank">BMW Manufacturing Co., Intern</a>
+							<a href="https://www.plm.automation.siemens.com/global/en/" target="_blank">Siemens Digital Industries Software, Simulations and Test Systems Intern</a>
 						</div>
 						<p class="body-subheader">Timeframe</p>
 						<p class="body-subtext">
-							I spent three rotations with BMW in Fall of 2017, Summer of 2018 and Spring of 2019. My first two rotations were with VPS (Value Added Production Systems) Assembly, and my final rotation was as an assembly intern for engines, powertrain, and marriage.
+							I spent one rotation with Siemens Digital Industries Software in the fall of 2019.
+						</p>
+						<p class="body-subheader">Responsibilities</p>
+						<p class="body-subtext">
+						<ul>
+							<li>Contributed to the development of Siemens’ first cloud-based simulation solution as a member of an international scrum team.</li>
+							<li>Collaborated to design and architect components used in the application’s core user interface.</li>
+							<li>Developed front-end application code with JavaScript and AngularJS utilizing Node.js</li>
+							<li>Received Professional Scrum Master I Certification</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="body">
+					<div class="body-text">
+						<div class="body-title">
+							<a href="https://www.bmwusfactory.com/" target="_blank">BMW Manufacturing Co., VPS Assembly Intern</a>
+						</div>
+						<p class="body-subheader">Timeframe</p>
+						<p class="body-subtext">
+							I spent three rotations with BMW in fall of 2017, summer of 2018 and spring of 2019.
 						</p>
 						<p class="body-subheader">Responsibilities</p>
 						<p class="body-subtext">
