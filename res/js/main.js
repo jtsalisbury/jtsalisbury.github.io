@@ -84,10 +84,8 @@ function loadRepos() {
     }
 
     repos.sort(function(a, b) {
-      return a.name - b.name;
+      return (a.updated_at < b.updated_at) ? 1 : ((a.updated_at > b.updated_at) ? -1 : 0);
     })
-
-    console.log(repos);
 
     $(repos).each(function() {
       $(".github-projects-list").append("<li><a class='github-project' target='_blank' href='" + this.html_url + "'>" + this.name + "</a></li>");
